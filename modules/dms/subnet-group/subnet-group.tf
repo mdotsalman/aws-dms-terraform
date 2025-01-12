@@ -9,5 +9,5 @@ resource "aws_dms_replication_subnet_group" "this" {
   replication_subnet_group_description = var.repl_subnet_group_description
   subnet_ids                           = var.repl_subnet_group_subnet_ids
 
-  tags = merge(var.tags, var.repl_subnet_group_tags)
+  tags = var.repl_subnet_group_tags
 }
