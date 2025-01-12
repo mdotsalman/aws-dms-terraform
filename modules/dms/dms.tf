@@ -25,7 +25,7 @@ module "replication_instance" {
   repl_instance_publicly_accessible          = var.repl_instance_publicly_accessible
   repl_instance_class                        = var.repl_instance_class
   repl_instance_id                           = var.repl_instance_id
-  repl_instance_subnet_group_id              = var.repl_instance_subnet_group_id
+  repl_instance_subnet_group_id              = module.subnet_group.id
   repl_instance_vpc_security_group_ids       = var.repl_instance_vpc_security_group_ids
   repl_instance_tags                         = var.repl_instance_tags
   repl_instance_timeouts                     = var.repl_instance_timeouts
