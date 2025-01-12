@@ -21,7 +21,6 @@ module "dms" {
   repl_instance_publicly_accessible          = true
   repl_instance_class                        = "dms.r5.large"
   repl_instance_id                           = "${local.name}-replication-instance"
-  repl_instance_subnet_group_id              = module.dms.replication_subnet_group_id
   repl_instance_vpc_security_group_ids       = ["sg-12345678"]
 
   repl_instance_tags = var.tags
