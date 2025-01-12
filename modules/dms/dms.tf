@@ -8,6 +8,7 @@ module "subnet_group" {
   repl_subnet_group_tags        = var.repl_subnet_group_tags
 }
 
+# REPLICATION INSTANCE
 module "replication_instance" {
   source = "./replication-instance"
 
