@@ -9,13 +9,13 @@ data "aws_vpc" "this" {
   }
 }
 
-data "aws_subnets" "public" {
+data "aws_subnets" "private" {
   filter {
     name   = "vpc-id"
     values = [data.aws_vpc.this.id]
   }
   filter {
     name   = "tag:Visibility"
-    values = ["public"]
+    values = ["private"]
   }
 }
