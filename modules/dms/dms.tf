@@ -22,7 +22,7 @@ module "replication_instance" {
   repl_instance_multi_az                     = var.repl_instance_multi_az
   repl_instance_network_type                 = "IPV4"
   repl_instance_preferred_maintenance_window = "sun:01:00-sun:03:00"
-  repl_instance_publicly_accessible          = true
+  repl_instance_publicly_accessible          = false
   repl_instance_class                        = var.repl_instance_class
   repl_instance_id                           = var.repl_instance_id
   repl_instance_subnet_group_id              = module.subnet_group.id
